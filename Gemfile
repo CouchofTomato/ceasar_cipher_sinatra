@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'sintra'
+gem 'sinatra'
+gem 'sinatra-contrib'

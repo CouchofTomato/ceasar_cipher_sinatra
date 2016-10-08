@@ -3,21 +3,25 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
+    <h1>Caesar Cipher</h1>
+    <p>
+      Use this so that the Men in Black probably can't track your porn habits
+    </p>
     <div class="div_form">
       <form action="/" method="post">
         <fieldset>
-          <legend>Ceasar Cipher</legend>
+          <legend>Caesar Cipher</legend>
           <label for="text_input">Text to encode:</label>
           <textarea rows="4" name="text_input"></textarea>
           <label for="key">Cipher key:</label>
           <input id="num" type="number" name="cipher_key" id="key" />
-          <input type="submit" name="cipher_text" value="Cipher!" />
+          <input id="sub_button" type="submit" name="cipher_text" value="Encode!" />
         </fieldset>
       </form>
     </div>
 
     <div class="cipher_form">
-      <textarea name="cipher_output" rows="8" cols="40" readonly><%= cipher %> </textarea>
+      <textarea name="cipher_output" rows="3" cols="40" readonly><%= cipher %></textarea>
     </div>
 
   </body>

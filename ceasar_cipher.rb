@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
-def ceasar_cipher(string, number = 0)
+def caesar_cipher(string, number = 0)
   string_array = string.split(//)
   new_array = []
   string_array.each do |char|
@@ -34,12 +34,12 @@ def ceasar_cipher(string, number = 0)
 end
 
 get '/' do
-  erb :index
+  erb :index, :locals => {:cipher => ""}
 end
 
 post '/' do
-  ceasar_string = params["text_input"]
-  ceasar_number = params["cipher_key"].to_i
-  ciphered_string = ceasar_cipher(ceasar_string, ceasar_number)
+  caesar_string = params["text_input"]
+  caesar_number = params["cipher_key"].to_i
+  ciphered_string = caesar_cipher(caesar_string, caesar_number)
   erb :index, :locals => {:cipher => ciphered_string}
 end

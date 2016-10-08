@@ -1,12 +1,24 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
   <body>
-    <form action="/" method="post">
-      <label for="text_input">Text to encode:</label>
-      <input type="text" name="cipher_text" id="text_input" />
-      <label for="key">Cipher key:</label>
-      <input type="text" name="cipher_key" id="key" />
-      <input type="submit" name="cipher_text" value="Cipher!" />
-    </form>
+    <div class="div_form">
+      <form action="/" method="post">
+        <fieldset>
+          <legend>Ceasar Cipher</legend>
+          <label for="text_input">Text to encode:</label>
+          <textarea rows="4" name="text_input"></textarea>
+          <label for="key">Cipher key:</label>
+          <input id="num" type="number" name="cipher_key" id="key" />
+          <input type="submit" name="cipher_text" value="Cipher!" />
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="cipher_form">
+      <textarea name="cipher_output" rows="8" cols="40" readonly><%= cipher %> </textarea>
+    </div>
+
   </body>
 </html>

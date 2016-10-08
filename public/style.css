@@ -1,0 +1,19 @@
+.div_form {
+  width: 300;
+  margin: auto;
+  display: block;
+}
+
+.div_form form textarea {
+  width: 100%;
+}
+
+.div_form form #num {
+  margin-top: 15;
+}
+
+.cipher_form {
+  width: 300;
+  margin :auto;
+  display: block;
+}
